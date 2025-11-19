@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-900: #0B1A33;
+  --color-navy-800: #112240;
+  --color-charcoal-900: #0E0E0F;
+  --color-charcoal-800: #1A1A1C;
+  --color-gold-400: #CFAE62;
+  --color-gold-500: #B89B52;
+  --color-offwhite: #F5F5F5;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --animate-fade-in: fadeIn 0.8s ease-out forwards;
+  --animate-slide-up: slideUp 0.8s ease-out forwards;
+  --animate-slow-spin: spin 10s linear infinite;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+  }
+
+  .glass-card {
+    @apply bg-navy-900/40 backdrop-blur-md border border-white/5 hover:border-gold-400/30 transition-colors duration-500;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-400 to-yellow-200;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-charcoal-900 text-offwhite font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E0E0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CFAE62;
+}
