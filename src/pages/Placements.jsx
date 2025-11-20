@@ -13,8 +13,9 @@ const Placements = () => {
     ];
 
     const recruiters = [
-        'Deloitte', 'HDFC Bank', 'ICICI Bank', 'TCS', 'Capgemini',
-        'Amazon', 'Bajaj Finserv', 'Godrej', 'Berger Paints', 'Mercedes Benz'
+        'Kotak', 'Coca Cola', 'Zomato', 'Tata Capital', 'ICICI Bank',
+        'Aditya Birla', 'UBS', 'DHL', 'Tata BlueScope Steel', 'Jaivik',
+        'Markets and Markets', 'WNS', 'Team Global Logistics Pvt Ltd'
     ];
 
     return (
@@ -27,9 +28,23 @@ const Placements = () => {
                 >
                     Career <span className="text-gold-400">Success</span>
                 </motion.h1>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-10">
                     Our students are preferred by top organizations for their ethical grounding and practical skills.
                 </p>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 }}
+                >
+                    <a
+                        href="https://drive.google.com/file/d/15s0l5lTWX5HD52Y2b76uH0aBeshlAms6/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-gold-400 text-navy-900 px-8 py-3 rounded-lg font-semibold hover:bg-white transition-colors"
+                    >
+                        View Placement Report
+                    </a>
+                </motion.div>
             </Section>
 
             <Section dark>
@@ -38,10 +53,10 @@ const Placements = () => {
 
             <Section>
                 <h2 className="text-4xl font-serif text-white text-center mb-16">Top Recruiters</h2>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
                     {recruiters.map((company, index) => (
-                        <Card key={index} className="flex items-center justify-center h-32 hover:bg-white/5 transition-colors">
-                            <span className="text-xl font-bold text-gray-300">{company}</span>
+                        <Card key={index} className="flex items-center justify-center min-h-[8rem] p-4 hover:bg-white/5 transition-colors">
+                            <span className="text-lg font-bold text-gray-300 text-center leading-tight">{company}</span>
                         </Card>
                     ))}
                 </div>

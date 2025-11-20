@@ -30,15 +30,34 @@ const Contact = () => {
                             <div className="space-y-6">
                                 <div className="flex gap-4 items-start">
                                     <MapPin className="text-gold-400 shrink-0" />
-                                    <p className="text-gray-400">DES Campus, Agarkar Road, Deccan Gymkhana, Pune - 411004</p>
+                                    <p className="text-gray-400">
+                                        Institute Of Management Development and Research,<br />
+                                        DES Campus, Agarkar Road,<br />
+                                        Deccan Gymkhana, Pune - 411 004
+                                    </p>
                                 </div>
                                 <div className="flex gap-4 items-center">
                                     <Phone className="text-gold-400 shrink-0" />
-                                    <p className="text-gray-400">+91 20 6765 6260</p>
+                                    <p className="text-gray-400">+91-020 - 67656103 / 67656103</p>
                                 </div>
                                 <div className="flex gap-4 items-center">
                                     <Mail className="text-gold-400 shrink-0" />
-                                    <p className="text-gray-400">admissions@imdr.edu</p>
+                                    <p className="text-gray-400">administration@imdr.edu</p>
+                                </div>
+
+                                <div className="pt-6 border-t border-white/10">
+                                    <h4 className="text-lg font-serif text-white mb-4">For Administration</h4>
+                                    <div className="space-y-3">
+                                        <p className="text-gold-400 font-medium">Mr. Pradeep Thopte</p>
+                                        <div className="flex gap-4 items-center">
+                                            <Phone className="text-gold-400 shrink-0" size={16} />
+                                            <p className="text-gray-400 text-sm">020 - 67656103 , +91-9850681616</p>
+                                        </div>
+                                        <div className="flex gap-4 items-center">
+                                            <Mail className="text-gold-400 shrink-0" size={16} />
+                                            <p className="text-gray-400 text-sm">administration@imdr.edu</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </Card>
